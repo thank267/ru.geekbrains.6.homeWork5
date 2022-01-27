@@ -6,13 +6,9 @@
 
 	<modules>
 		<module>discovery-service</module>
-		<module>config-server</module>
 		<module>front-service</module>
-		<module>gateway-service</module>
 		<module>product-service</module>
         <module>cloud-common</module>
-        <module>greeting-service</module>
-        <module>slow-service</module>
 	</modules>
 
 	<parent>
@@ -21,7 +17,7 @@
 		<version>2.5.2</version>
 		<relativePath/>
 	</parent>
-	
+
 	<groupId>com.flamexander</groupId>
 	<artifactId>advanced-cloud</artifactId>
 	<version>0.0.1-SNAPSHOT</version>

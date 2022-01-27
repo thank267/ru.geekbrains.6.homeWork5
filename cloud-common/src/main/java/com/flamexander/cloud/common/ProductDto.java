@@ -1,11 +1,12 @@
 package com.flamexander.cloud.common;
 
-import java.math.BigDecimal;
+import lombok.ToString;
 
+@ToString
 public class ProductDto {
     private Long id;
     private String title;
-    private BigDecimal price;
+    private Integer price;
 
     public Long getId() {
         return id;
@@ -23,18 +24,18 @@ public class ProductDto {
         this.title = title;
     }
 
-    public BigDecimal getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
-    public void setPrice(BigDecimal price) {
+    public void setPrice(Integer price) {
         this.price = price;
     }
 
     public ProductDto() {
     }
 
-    public ProductDto(Long id, String title, BigDecimal price) {
+    public ProductDto(Long id, String title, Integer price) {
         this.id = id;
         this.title = title;
         this.price = price;
