@@ -23,7 +23,7 @@ public class Product {
     private String title;
 
     @Column(name = "price")
-    private BigDecimal price;
+    private Integer price;
 
     @Column(name = "created_at")
     @CreationTimestamp

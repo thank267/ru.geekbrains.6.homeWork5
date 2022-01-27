@@ -2,6 +2,7 @@ package com.flamexander.cloud.service.product;
 
 import com.flamexander.cloud.common.ProductDto;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -11,7 +12,8 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/api/v1/products")
 @RequiredArgsConstructor
-@CrossOrigin("http://localhost:3000") // Homework: *
+@CrossOrigin("*") // Homework: *
+@Slf4j
 public class ProductController {
     private final ProductService productService;
 
@@ -19,6 +21,7 @@ public class ProductController {
 
     @GetMapping
     public List<ProductDto> findAll() {
+        log.info("endPoint work");
         return productService.findAll().stream().map(mapper).collect(Collectors.toList());
     }
 
